@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="ifpb.pdm.junior.airsoft.MainActivity">
+
+    <include layout="@layout/box_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPn"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btchat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorInativePn"
+                android:onClick="btchat"
+                android:text="@string/box_chat" />
+
+            <Button
+                android:id="@+id/btMission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPn"
+                android:onClick="btMission"
+                android:text="@string/box_mission" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPn" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AirSoft</string>
+
+    <!-- Strings related to login -->
+    <string name="login_email">Email</string>
+    <string name="login_password">Senha </string>
+    <string name="login_button">Entrar</string>
+
+    <!-- Strings relates to Painel-->
+    <string name="box_nome">Seu nome vai aqui!!</string>
+    <string name="box_chat">Bate papo</string>
+    <string name="box_mission">Missôes</string>
+    <string name="box_bt_mission">Missôes</string>
+    <string name="box_bt_config">Configuração</string>
+    <string name="box_bt_Galery">Galeria</string>
+    <string name="box_bt_oldMission">Missôes Antigas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
