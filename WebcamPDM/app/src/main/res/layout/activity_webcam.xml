@@ -28,14 +28,16 @@
             android:id="@+id/surfaceView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="8dp"
             android:clickable="false"
+            tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp" />
 
         <TextView
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="31dp"
             android:ems="10"
             android:inputType="text"
@@ -43,19 +45,18 @@
             android:textAlignment="center"
             android:textColor="@color/colorIDcam"
             tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="16dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            tools:layout_editor_absoluteY="16dp" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/surfaceView"
-            android:layout_alignRight="@+id/surfaceView"
             android:layout_alignEnd="@+id/surfaceView"
+            android:layout_alignRight="@+id/surfaceView"
             android:layout_gravity="bottom|end"
             android:layout_margin="15dp"
+            android:onClick="flash"
             android:src="@drawable/flash_1_2"
             tools:layout_editor_absoluteX="310dp"
             tools:layout_editor_absoluteY="488dp" />
