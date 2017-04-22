@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF3030</color>
+    <color name="colorbtAccent">#D0021B</color>
+    <color name="colorbtGravacoes">#F8E71C</color>
+    <color name="colorbtRealtime">#7ED321</color>
+    <color name="colorbtControl">#4A90E2</color>
+    <color name="colorbackgroud">#303030</color>
+    <color name="colorbgAccent">#212121</color>
+    <color name="colorIDcam">#BEA211</color>
+</resources>

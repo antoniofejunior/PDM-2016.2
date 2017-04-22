@@ -19,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction tr = fragmentManager.beginTransaction();
         tr.add(R.id.frameMain, new missionsFragment());
         tr.replace(R.id.frameMain, new missionsFragment());
+        tr.addToBackStack("mission");
         tr.commit();
     }
 
     private void replaceFragment(int id, Fragment fragment) {
         FragmentTransaction tr = fragmentManager.beginTransaction();
         tr.replace(id, fragment);
+        tr.addToBackStack(fragment.getClass().getSimpleName());
         tr.commit();
     }
 
