@@ -30,10 +30,12 @@
             android:layout_height="match_parent"
             android:clickable="false"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+            tools:layout_editor_absoluteY="8dp" >
+
+        </FrameLayout>
 
         <TextView
-            android:id="@+id/editText"
+            android:id="@+id/tvIDcam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -41,7 +43,6 @@
             android:layout_marginTop="31dp"
             android:ems="10"
             android:inputType="text"
-            android:text="id da camera"
             android:textAlignment="center"
             android:textColor="@color/colorIDcam"
             tools:layout_editor_absoluteX="84dp"

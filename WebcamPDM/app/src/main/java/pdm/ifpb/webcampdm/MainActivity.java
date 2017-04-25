@@ -15,8 +15,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void cam(View view){
+    public void cam(View view) {
         startActivity(new Intent(getApplicationContext(), WebcamActivity.class));
+    }
+
+    public void control(View view) {
+        startActivity(new Intent(getApplicationContext(), ControlActivity.class));
     }
 }
 

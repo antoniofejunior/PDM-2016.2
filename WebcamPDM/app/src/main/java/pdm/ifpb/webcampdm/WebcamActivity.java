@@ -1,16 +1,19 @@
 package pdm.ifpb.webcampdm;
 
+import android.content.SharedPreferences;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 public class WebcamActivity extends AppCompatActivity {
 
     private Camera camera;
     private CameraPreview cameraPreview;
+    private boolean booFlash;
     private FloatingActionButton btflash;
 
     @Override
@@ -26,6 +29,9 @@ public class WebcamActivity extends AppCompatActivity {
         cameraPreview = new CameraPreview(this, camera);
         FrameLayout preview = (FrameLayout) findViewById(R.id.surfaceView);
         preview.addView(cameraPreview);
+        booFlash = true;
+        TextView idcam = (TextView) findViewById(R.id.tvIDcam);
+        idcam.setText(getIDCam());
     }
 
     public static Camera getCameraInstance() {
@@ -37,12 +43,37 @@ public class WebcamActivity extends AppCompatActivity {
         return c;
     }
 
+
     public void flash(View view) {
-        if (camera.getParameters().getFlashMode() == Camera.Parameters.FLASH_MODE_OFF) {
-            camera.getParameters().setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+        Camera.Parameters parm = camera.getParameters();
+        if (booFlash) {
+            setflash(Camera.Parameters.FLASH_MODE_TORCH);
+            booFlash = false;
         } else {
-            camera.getParameters().setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+            setflash(Camera.Parameters.FLASH_MODE_OFF);
+            booFlash = true;
         }
     }
 
+
+    private void setflash(String parameter) {
+        Camera.Parameters parm = camera.getParameters();
+        parm.setFlashMode(parameter);
+        camera.setParameters(parm);
+    }
+
+    private String getIDCam() {
+        SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+        if (!pref.contains("idcam")) {
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putString("idcam", ServerId());
+            editor.commit();
+        }
+            return pref.getString("idcam",null);
+
+    }
+
+    private String ServerId() {
+        return "id cam 2";
+    }
 }
