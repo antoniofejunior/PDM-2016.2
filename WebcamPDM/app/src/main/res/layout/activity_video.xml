@@ -4,62 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorbackgroud"
     android:orientation="vertical"
-    tools:context="pdm.ifpb.webcampdm.WebcamActivity">
+    android:background="@color/colorbackgroud"
+    tools:context="pdm.ifpb.webcampdm.VideoActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarcam"
+        android:id="@+id/toolbarvideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorbgAccent"
         android:visibility="visible"
         app:navigationIcon="@drawable/arrow_left"
-        app:title="Web cam"
+        app:title="Gravacão"
         app:titleTextColor="@android:color/white"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/frameCam"
+        <VideoView
+            android:id="@+id/videoView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="false"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+            tools:layout_editor_absoluteY="8dp">
 
+        </VideoView>
 
         <TextView
-            android:id="@+id/tvIDcam"
+            android:id="@+id/tvIDcamVideo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="31dp"
             android:ems="10"
             android:inputType="text"
             android:textAlignment="center"
             android:textColor="@color/colorIDcam"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="16dp" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp" />
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
+            android:id="@+id/fabTrash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/frameCam"
-            android:layout_alignEnd="@+id/frameCam"
-            android:layout_alignRight="@+id/frameCam"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="15dp"
+            android:layout_alignBaseline="@+id/videoView"
+            android:layout_alignTop="@+id/videoView"
+            android:layout_alignRight="@+id/videoView"
             android:onClick="flash"
-            android:src="@drawable/flash_1_2"
-            tools:layout_editor_absoluteX="310dp"
-            tools:layout_editor_absoluteY="488dp" />
+            android:src="@drawable/delete"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
     </RelativeLayout>
-
 </LinearLayout>

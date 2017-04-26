@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:background="@color/colorbackgroud"
     android:orientation="vertical"
-    tools:context="pdm.ifpb.webcampdm.WebcamActivity">
+    tools:context="pdm.ifpb.webcampdm.RealtimeActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarcam"
+        android:id="@+id/toolbarReal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorbgAccent"
         android:visibility="visible"
         app:navigationIcon="@drawable/arrow_left"
-        app:title="Web cam"
+        app:title="Ao vivo"
         app:titleTextColor="@android:color/white"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -25,16 +25,17 @@
         android:layout_height="match_parent">
 
         <FrameLayout
-            android:id="@+id/frameCam"
+            android:id="@+id/frameCamReal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="false"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+            tools:layout_editor_absoluteY="8dp" >
 
+        </FrameLayout>
 
         <TextView
-            android:id="@+id/tvIDcam"
+            android:id="@+id/tvIDcamReal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -51,15 +52,16 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/frameCam"
-            android:layout_alignEnd="@+id/frameCam"
-            android:layout_alignRight="@+id/frameCam"
+            android:layout_alignBottom="@+id/frameCamReal"
+            android:layout_alignEnd="@+id/frameCamReal"
+            android:layout_alignRight="@+id/frameCamReal"
             android:layout_gravity="bottom|end"
             android:layout_margin="15dp"
             android:onClick="flash"
             android:src="@drawable/flash_1_2"
             tools:layout_editor_absoluteX="310dp"
             tools:layout_editor_absoluteY="488dp" />
+
     </RelativeLayout>
 
 </LinearLayout>

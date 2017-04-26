@@ -27,7 +27,7 @@ public class WebcamActivity extends AppCompatActivity {
             btflash.setClickable(false);
         }
         cameraPreview = new CameraPreview(this, camera);
-        FrameLayout preview = (FrameLayout) findViewById(R.id.surfaceView);
+        FrameLayout preview = (FrameLayout) findViewById(R.id.frameCam);
         preview.addView(cameraPreview);
         booFlash = true;
         TextView idcam = (TextView) findViewById(R.id.tvIDcam);

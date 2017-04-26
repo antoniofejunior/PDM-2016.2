@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorIDcam"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,6 +53,7 @@
                 android:layout_margin="15dp"
                 android:layout_weight="1"
                 android:background="@color/colorbtAccent"
+                android:onClick="gravar"
                 android:padding="15dp"
                 android:text="Gravar por 1 minuto"
                 android:textColor="@android:color/white" />
@@ -64,8 +65,9 @@
                 android:layout_margin="15dp"
                 android:layout_weight="1"
                 android:background="@color/colorbtGravacoes"
+                android:onClick="listarGravacao"
                 android:padding="15dp"
-                android:text="Gravar por 1 minuto" />
+                android:text="Ver Gravações" />
 
             <Button
                 android:id="@+id/btRealtime"
@@ -74,7 +76,8 @@
                 android:layout_margin="15dp"
                 android:layout_weight="1"
                 android:background="@color/colorbtRealtime"
-                android:text="Gravar por 1 minuto" />
+                android:onClick="realtime"
+                android:text="Assistir ao vivo" />
 
         </LinearLayout>
     </LinearLayout>

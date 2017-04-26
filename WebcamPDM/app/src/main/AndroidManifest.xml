@@ -30,6 +30,14 @@
         <activity
             android:name=".WebcamActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".VideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RealtimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VideosListActivity"
+            android:screenOrientation="portrait" />
     </application>
-S
 </manifest>
