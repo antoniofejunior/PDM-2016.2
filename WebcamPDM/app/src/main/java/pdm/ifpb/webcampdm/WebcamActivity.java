@@ -38,6 +38,11 @@ public class WebcamActivity extends AppCompatActivity {
         Camera c = null;
         try {
             c = Camera.open();
+            Camera.Parameters parm = c.getParameters();
+            parm.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+            parm.setAutoWhiteBalanceLock(true);
+            parm.setAntibanding(Camera.Parameters.ANTIBANDING_AUTO);
+            c.setParameters(parm);
         } catch (Exception e) {
         }
         return c;
