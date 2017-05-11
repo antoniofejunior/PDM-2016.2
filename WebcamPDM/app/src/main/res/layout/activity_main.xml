@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorbackgroud"
     android:orientation="vertical"
-    tools:context="pdm.ifpb.webcampdm.MainActivity">
+    tools:context="pdm.ifpb.webcampdm.Activity.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -32,7 +32,7 @@
             android:text="Iniciar aplicação como camera"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <TextView
@@ -59,10 +59,11 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="uri"
             android:text="Iniciar aplicação como Controle"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <TextView

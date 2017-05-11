@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackgroud"
+    android:orientation="vertical"
+    tools:context="pdm.ifpb.webcampdm.Activity.URLActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/URITobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorbgAccent"
+        android:onClick="voltar"
+        android:visibility="visible"
+        app:navigationIcon="@drawable/arrow_left"
+        app:title="URI"
+        app:titleTextColor="@android:color/white"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/URIedt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary"
+            android:hint="Informe a URI:"
+            android:textColor="@color/colorbtGravacoes"
+            android:textColorHint="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/btsalvar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorbtGravacoes"
+            android:onClick="salvar"
+            android:text="Salvar"
+            android:textColor="@android:color/background_dark" />
+
+        <Button
+            android:id="@+id/btsair"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorbtAccent"
+            android:onClick="voltar"
+            android:text="Cancelar"
+            android:textColor="@android:color/background_light" />
+
+    </LinearLayout>
+</LinearLayout>

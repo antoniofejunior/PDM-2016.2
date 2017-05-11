@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/colorbackgroud"
     android:orientation="vertical"
-    tools:context="pdm.ifpb.webcampdm.WebcamActivity">
+    tools:context="pdm.ifpb.webcampdm.Activity.WebcamActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarcam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorbgAccent"
+        android:onClick="voltar"
         android:visibility="visible"
         app:navigationIcon="@drawable/arrow_left"
         app:title="Web cam"
@@ -40,10 +41,13 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="31dp"
-            android:ems="10"
+            android:padding="5dp"
+            android:background="@color/colorbackgroud"
             android:inputType="text"
+            android:onClick="gravarVideo"
             android:textAlignment="center"
             android:textColor="@color/colorIDcam"
+            android:textSize="28sp"
             tools:layout_editor_absoluteX="84dp"
             tools:layout_editor_absoluteY="16dp" />
 

@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorbackgroud"
-    tools:context="pdm.ifpb.webcampdm.VideoActivity">
+    android:orientation="vertical"
+    tools:context="pdm.ifpb.webcampdm.Activity.VideoActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarvideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorbgAccent"
+        android:onClick="voltar"
         android:visibility="visible"
         app:navigationIcon="@drawable/arrow_left"
         app:title="Gravacão"
@@ -38,25 +39,27 @@
             android:id="@+id/tvIDcamVideo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorbackgroud"
             android:inputType="text"
             android:textAlignment="center"
             android:textColor="@color/colorIDcam"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp" />
+            android:textSize="28sp" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabTrash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/videoView"
-            android:layout_alignTop="@+id/videoView"
             android:layout_alignRight="@+id/videoView"
-            android:onClick="flash"
-            android:src="@drawable/delete"
+            android:layout_alignTop="@+id/videoView"
+            android:layout_marginBottom="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp" />
+            android:onClick="flash"
+            android:src="@drawable/delete"
+            android:textSize="20dp" />
     </RelativeLayout>
 </LinearLayout>

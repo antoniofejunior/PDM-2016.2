@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/colorbackgroud"
     android:orientation="vertical"
-    tools:context="pdm.ifpb.webcampdm.VideosListActivity">
+    tools:context="pdm.ifpb.webcampdm.Activity.VideosListActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarVideoList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorbgAccent"
+        android:onClick="voltar"
         android:visibility="visible"
         app:navigationIcon="@drawable/arrow_left"
         app:title="Gravações"
@@ -23,8 +24,7 @@
     <ListView
         android:id="@+id/listVideos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
     </ListView>
 </LinearLayout>

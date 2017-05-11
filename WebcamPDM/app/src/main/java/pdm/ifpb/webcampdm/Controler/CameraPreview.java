@@ -1,4 +1,4 @@
-package pdm.ifpb.webcampdm;
+package pdm.ifpb.webcampdm.Controler;
 
 import android.content.Context;
 import android.hardware.Camera;
@@ -21,7 +21,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         mCamera = camera;
         mHolder = getHolder();
         mHolder.addCallback(this);
-        mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
     }
 
     public void surfaceCreated(SurfaceHolder holder) {
@@ -36,7 +35,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     }
 
     public void surfaceDestroyed(SurfaceHolder holder) {
-
+        mCamera.release();
     }
 
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
@@ -55,7 +54,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             mCamera.startPreview();
 
         } catch (Exception e) {
-            Log.d("ajrLog", "Error starting camera preview: " + e.getMessage());
+            Log.d("AjrLog", "Error starting camera preview: " + e.getMessage());
         }
     }
 }

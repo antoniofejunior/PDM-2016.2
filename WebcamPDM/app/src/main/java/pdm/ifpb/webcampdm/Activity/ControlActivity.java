@@ -1,10 +1,12 @@
-package pdm.ifpb.webcampdm;
+package pdm.ifpb.webcampdm.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import pdm.ifpb.webcampdm.R;
 
 public class ControlActivity extends AppCompatActivity {
 
@@ -16,6 +18,10 @@ public class ControlActivity extends AppCompatActivity {
 
     public void listarGravacao(View view) {
         startActivity(new Intent(getApplicationContext(), VideosListActivity.class));
+    }
+
+    public void voltar(View view) {
+        onBackPressed();
     }
 
     public void gravar(View view) {
