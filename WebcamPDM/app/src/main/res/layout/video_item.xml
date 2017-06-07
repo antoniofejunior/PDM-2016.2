@@ -7,7 +7,7 @@
     android:padding="10dp">
 
     <ImageView
-        android:id="@+id/lviImage"
+        android:id="@+id/IVImage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -20,7 +20,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/lviIdCam"
+            android:id="@+id/VIIdCam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorIDcam"
@@ -28,7 +28,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/lviData"
+            android:id="@+id/VIData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
@@ -36,7 +36,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/lviHora"
+            android:id="@+id/VIHora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
